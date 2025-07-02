@@ -6,7 +6,7 @@ const productsSchema = new mongoose.Schema({
   category: String,
   subcategory: String,
   price: Number,
-  image: String, // image url
+  image: [String], // image url
   description: String,
 });
 
