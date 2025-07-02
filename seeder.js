@@ -4,7 +4,7 @@ require("dotenv").config();
 
 const categories = ["male", "female", "kids", "electronics"];
 
-const fashionSubcategories = ["shoes", "tshirt", "jeans", "shirt", "hoodie"];
+const fashionSubcategories = ["shoes", "tshirt", "jeans", "shirt"];
 const electronicsSubcategories = [
   "mobile",
   "laptop",
@@ -23,112 +23,107 @@ const descriptions = [
 
 const fashionImages = {
   shoes: [
-    "https://images.unsplash.com/photo-1600180758890-9fb5fd357a8d",
-    "https://images.unsplash.com/photo-1580934427617-65b44cfa2093",
-    "https://images.unsplash.com/photo-1593032465175-7bdbbb6f9334",
+    "https://w7.pngwing.com/pngs/75/649/png-transparent-adidas-shoe-sneakers-women-shoes-purple-white-violet-thumbnail.png",
+    "https://w7.pngwing.com/pngs/88/948/png-transparent-shoe-shoes-brown-leather-fashion-thumbnail.png",
+    "https://w7.pngwing.com/pngs/323/773/png-transparent-sneakers-basketball-shoe-sportswear-nike-shoe-outdoor-shoe-running-sneakers-thumbnail.png",
   ],
   tshirt: [
-    "https://images.unsplash.com/photo-1585386959984-a4155224a1fc",
-    "https://images.unsplash.com/photo-1602810317773-6b46eb7a2871",
-    "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab",
+    "https://w7.pngwing.com/pngs/74/236/png-transparent-printed-t-shirt-hoodie-clothing-tshirt-design-tshirt-angle-active-shirt-thumbnail.png",
+    "https://w1.pngwing.com/pngs/235/798/png-transparent-hearts-tshirt-clothing-fashion-clothing-accessories-hearts-tshirt-tshirt-design-ideas-t-shirt-thumbnail.png",
+    "https://w7.pngwing.com/pngs/257/418/png-transparent-white-shirt-t-shirt-clothing-sleeve-polo-shirt-tshirt-mockup-tshirt-angle-white-thumbnail.png",
   ],
   jeans: [
-    "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f",
-    "https://images.unsplash.com/photo-1593032457861-bfc2c18c1c15",
-    "https://images.unsplash.com/photo-1564463838269-98429c176418",
+    "https://w7.pngwing.com/pngs/63/280/png-transparent-jeans-denim-slim-fit-pants-bell-bottoms-jeans-blue-fashion-boy-thumbnail.png",
+    "https://w7.pngwing.com/pngs/228/567/png-transparent-jeans-clothing-denim-pants-jeans-cowboy-autocad-dxf-trousers-thumbnail.png",
+    "https://w7.pngwing.com/pngs/659/97/png-transparent-jeans-denim-jeans-blue-user-interface-design-color-thumbnail.png",
   ],
   shirt: [
-    "https://images.unsplash.com/photo-1582725278678-34d6e547a5a5",
-    "https://images.unsplash.com/photo-1618354691217-91d85e05f728",
-    "https://images.unsplash.com/photo-1598032893643-348bb40f0f31",
-  ],
-  hoodie: [
-    "https://images.unsplash.com/photo-1602810318753-5e9cf05e52fa",
-    "https://images.unsplash.com/photo-1618354691283-5c22d0b946e0",
-    "https://images.unsplash.com/photo-1629466328937-6b0d4f93f40e",
+    "https://w7.pngwing.com/pngs/9/1001/png-transparent-black-dress-shirt-t-shirt-dress-shirt-clothing-black-dress-shirt-tshirt-black-formal-wear-thumbnail.png",
+    "https://w7.pngwing.com/pngs/264/23/png-transparent-t-shirt-dress-shirt-sleeve-shirt-tshirt-blue-tartan-thumbnail.png",
+    "https://w7.pngwing.com/pngs/972/557/png-transparent-blue-dress-shirt-t-shirt-dress-shirt-dress-shirt-tshirt-blue-image-file-formats-thumbnail.png",
   ],
 };
 
 const electronicsImages = {
   mobile: [
-    "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9",
-    "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
-    "https://images.unsplash.com/photo-1580910051072-cdfb4d205f9f",
+    "https://w7.pngwing.com/pngs/166/408/png-transparent-feature-phone-smartphone-mobile-phone-accessories-pda-smartphone-gadget-electronics-mobile-phone-thumbnail.png",
+    "https://w7.pngwing.com/pngs/656/137/png-transparent-feature-phone-smartphone-iphone-x-mockup-smartphone-electronics-gadget-logo-thumbnail.png",
+    "https://w7.pngwing.com/pngs/603/63/png-transparent-smartphone-vivo-v9-2018-world-cup-feature-phone-smartphone-blue-gadget-electronics-thumbnail.png",
   ],
   laptop: [
-    "https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
-    "https://images.unsplash.com/photo-1518770660439-4636190af475",
-    "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
+    "https://w7.pngwing.com/pngs/210/256/png-transparent-laptop-laptop-notebook-electronics-netbook-computer-thumbnail.png",
+    "https://w7.pngwing.com/pngs/487/248/png-transparent-laptop-computer-icons-laptop-electronics-gadget-image-file-formats-thumbnail.png",
+    "https://w7.pngwing.com/pngs/480/431/png-transparent-laptop-dell-computer-hp-pavilion-windows-10-laptop-gadget-electronics-netbook-thumbnail.png",
   ],
   headphones: [
-    "https://images.unsplash.com/photo-1585386959984-7d027ad91a09",
-    "https://images.unsplash.com/photo-1585386959984-651a06672ef3",
-    "https://images.unsplash.com/photo-1618354691333-fb6a7da71c5b",
+    "https://w7.pngwing.com/pngs/899/366/png-transparent-jbl-t450-headphones-wireless-audio-headphones-thumbnail.png",
+    "https://w7.pngwing.com/pngs/969/417/png-transparent-red-beats-by-dr-dre-wireless-headphones-headphones-beats-electronics-microphone-sound-disc-jockey-headphone-electronics-recording-studio-musician-thumbnail.png",
+    "https://w7.pngwing.com/pngs/782/603/png-transparent-black-headphones-headset-wearing-headphones-thumbnail.png",
   ],
   camera: [
-    "https://images.unsplash.com/photo-1519183071298-a2962edc3c66",
-    "https://images.unsplash.com/photo-1530032143320-7a4a15b27f91",
-    "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f",
+    "https://w7.pngwing.com/pngs/940/845/png-transparent-nikon-dslr-camera-thumbnail.png",
+    "https://w7.pngwing.com/pngs/31/934/png-transparent-black-nikon-dslr-camera-nikon-d800-nikon-d600-camera-digital-slr-camera-electronics-camera-lens-photography-thumbnail.png",
+    "https://w7.pngwing.com/pngs/73/452/png-transparent-black-nikon-dslr-camera-full-frame-digital-slr-camera-back-illuminated-sensor-nikon-dslr-lens-camera-lens-photography-thumbnail.png",
   ],
   smartwatch: [
-    "https://images.unsplash.com/photo-1598970434795-0c54fe7c0642",
-    "https://images.unsplash.com/photo-1600180758890-5cf94d802041",
-    "https://images.unsplash.com/photo-1523275335684-7f0c0d80b0c8",
+    "https://w7.pngwing.com/pngs/882/409/png-transparent-smart-watch-thumbnail.png",
+    "https://w7.pngwing.com/pngs/504/311/png-transparent-apple-watch-series-2-apple-watch-series-3-smartwatch-black-smart-watch-black-hair-digital-black-white-thumbnail.png",
+    "https://w7.pngwing.com/pngs/296/368/png-transparent-amazon-com-gps-navigation-systems-amazfit-smartwatch-xiaomi-smart-watch-watch-accessory-mobile-phones-touchscreen-thumbnail.png",
   ],
 };
 
 mongoose
   .connect(process.env.MONGO_URI)
   .then(async () => {
-    console.log("Mongo Connected");
+    console.log("✅ Mongo Connected");
 
-    await Product.deleteMany({});
-    console.log("Old All Products Deleted");
+    await Product.deleteMany();
+    console.log("🗑️ Old products deleted");
 
     const products = [];
 
-    for (let i = 0; i <= 25; i++) {
+    for (let i = 1; i <= 50; i++) {
       const category =
         categories[Math.floor(Math.random() * categories.length)];
 
-      let subCategory, images;
+      let subCategory, imagesArray, image;
 
       if (category === "electronics") {
         subCategory =
           electronicsSubcategories[
             Math.floor(Math.random() * electronicsSubcategories.length)
           ];
-        images = electronicsImages[subCategory];
+        imagesArray = electronicsImages[subCategory];
       } else {
         subCategory =
           fashionSubcategories[
             Math.floor(Math.random() * fashionSubcategories.length)
           ];
-        images = fashionImages[subCategory];
+        imagesArray = fashionImages[subCategory];
       }
 
-      const selectedImage = images[Math.floor(Math.random() * images.length)];
+      image = imagesArray[Math.floor(Math.random() * imagesArray.length)];
       const price = Math.floor(Math.random() * 15000 + 500);
 
       products.push({
         title: `${
           category[0].toUpperCase() + category.slice(1)
-        } ${subCategory} ${i}`,
+        } ${subCategory}`,
         category,
         subcategory: subCategory,
         price,
-        image: selectedImage,
+        image,
         description:
           descriptions[Math.floor(Math.random() * descriptions.length)],
       });
     }
 
     await Product.insertMany(products);
-    console.log("Products Inserted Successfully");
+    console.log("✅ 50 products inserted successfully!");
 
     mongoose.disconnect();
   })
   .catch((err) => {
-    console.error("Error", err);
+    console.error("❌ Error", err);
     process.exit(1);
   });
