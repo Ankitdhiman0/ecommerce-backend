@@ -45,3 +45,20 @@ exports.deleteOrder = async (req, res) => {
     res.status(500).json({ msg: "Server error", error: err.message });
   }
 };
+
+exports.updateOrderStatus = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { status } = req.body;
+
+    const order = await Order.findById(id);
+    if (!order) return res.status(404).json({ msg: "Order not found" });
+
+    order.status = status;
+    await order.save();
+
+    res.status(200).json({ msg: "Order status updated", order });
+  } catch (err) {
+    res.status(500).json({ msg: "Server error", error: err.message });
+  }
+};

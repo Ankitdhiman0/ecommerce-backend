@@ -15,4 +15,7 @@ router.get("/my-orders", authMiddleware, orderController.getMyOrders);
 // Delete Orders
 router.delete("/:id", authMiddleware, orderController.deleteOrder);
 
+// Update Status
+router.put("/:id/status", authMiddleware, orderController.updateOrderStatus);
+
 module.exports = router;
